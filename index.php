@@ -12,7 +12,7 @@ foreach ($xml->children() as $row) {
     $licensePlate = $row->LicensePlate;
     $vehicle = $row->Vehicle;
     
-    $sql = "INSERT INTO transactions(name,phone,licensePlate,vehicle) VALUES ('" . $name . "','" . $phone . "','" . $licensePlate . "','" . $vehicle . "')";
+    $sql = "INSERT INTO transactions(name,citizenID,phone,licensePlate,vehicle) VALUES ('" . $name . "','" . $citizenID . "','" . $phone . "','" . $licensePlate . "','" . $vehicle . "')";
     
     $result = mysqli_query($conn, $sql);
     
