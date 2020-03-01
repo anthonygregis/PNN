@@ -84,7 +84,7 @@ mysqli_close($link);
                         <?php $i = 1; foreach($tableArray as $row) {?>
 						<div class="row">
 							<div class="cell" data-title="Name">
-                            <?php echo $row['nName'] ?>
+                            <?php echo $row['name'] ?>
 							</div>
 							<div class="cell" data-title="Citizen ID">
 							<?php echo $row['citizenID'] ?>
