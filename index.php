@@ -7,7 +7,8 @@ $xml = simplexml_load_file("input.xml") or die("Error: Cannot create object");
 
 foreach ($xml->children() as $row) {
     $name = $row->Name;
-    $phone = $row->Citizen;
+    $citizenID = $row->CitizenID;
+    $phone = $row->Phone;
     $licensePlate = $row->LicensePlate;
     $vehicle = $row->Vehicle;
     
