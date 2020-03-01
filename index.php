@@ -12,15 +12,11 @@ foreach ($xml->children() as $row) {
     $licensePlate = $row->LicensePlate;
     $vehicle = $row->Vehicle;
     
-    $sql = "INSERT INTO transactions(name,citizenID,phone,licensePlate,vehicle) VALUES ('" . $name . "','" . $citizenID . "','" . $phone . "','" . $licensePlate . "','" . $vehicle . "')";
-    
-    $result = mysqli_query($conn, $sql);
-    
-    if (! empty($result)) {
-        $affectedRow ++;
-    } else {
-        $error_message = mysqli_error($conn) . "\n";
-    }
+    echo $name . " ";
+    echo $citizenID . " ";
+    echo $phone . " ";
+    echo $licensePlate . " ";
+    echo $vehicle . "<br>";
 }
 ?>
 <h2>Insert XML Data to MySql Table Output</h2>
