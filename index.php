@@ -23,7 +23,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
           <div class="input-field first-wrap">
             <div class="input-select">
               <select data-trigger="" name="category" id="category" value="<?php echo $category; ?>">
-                <option placeholder="">Category</option>
+                <option disabled placeholder="">Category</option>
                 <option value="name">Name</option>
                 <option value="citizenID">Citizen ID</option>
                 <option value="phone">Phone</option>
