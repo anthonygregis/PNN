@@ -54,7 +54,7 @@ mysqli_close($link);
 	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/main-search.css?ver=1">
+	<link rel="stylesheet" type="text/css" href="css/main-search.css?ver=1.0">
 <!--===============================================================================================-->
 </head>
 <body>

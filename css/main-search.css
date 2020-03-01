@@ -223,6 +223,10 @@ iframe {
   width: 100% !important;
 }
 
+.row.header:hover{
+  background-color: #000;
+}
+
 .row:hover {
   background-color: #ffffff;
   cursor: pointer;
