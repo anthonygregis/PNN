@@ -17,7 +17,7 @@ if(isset($_GET["cat"]) && isset($_GET["search"])){
     // Prepare a select statement
     $sql = "SELECT * FROM transactions WHERE " . $category . " LIKE " . $search;
 
-    $result = mysqli_query($link, $query) or die(mysqli_error($link));
+    $result = mysqli_query($link, $sql) or die(mysqli_error($link));
     $tableArray = array();
     $counter = 0;
     while ($row = mysqli_fetch_array($result))
