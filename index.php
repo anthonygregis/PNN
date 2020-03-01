@@ -24,11 +24,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="input-select">
               <select data-trigger="" name="category" id="category" value="<?php echo $category; ?>">
                 <option placeholder="">Category</option>
-                <option>Name</option>
-                <option>Citizen ID</option>
-                <option>Phone</option>
-                <option>License Plate</option>
-                <option>Vehicle</option>
+                <option value="name">Name</option>
+                <option value="citizenID">Citizen ID</option>
+                <option value="phone">Phone</option>
+                <option value="licensePlate">License Plate</option>
+                <option value="vehicle">Vehicle</option>
               </select>
             </div>
           </div>
