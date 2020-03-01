@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("localhost", "pdadmin", "v9Tc^n89", "PDMLeak");
+$conn = mysqli_connect("localhost", "pdmadmin", "v9Tc^n89", "PDMLeak");
 
 $affectedRow = 0;
 
