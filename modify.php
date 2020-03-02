@@ -30,15 +30,6 @@ while ($row = mysqli_fetch_array($result))
 //Close Connection
 mysqli_close($link);
 
-if(isset($_POST['deleteItem']) and is_numeric($_POST['deleteItem']))
-{
-  $id = trim($_POST['deleteItem']);
-  $sql = "DELETE FROM transactions where id = ?";
-
-  $stmt = mysqli_prepare($link, $sql);
-  mysqli_stmt_bind_param($stmt, "s", $id);
-  $stmt->execute();
-}
 
 ?>
 <!DOCTYPE html>
@@ -65,7 +56,7 @@ if(isset($_POST['deleteItem']) and is_numeric($_POST['deleteItem']))
 <!--===============================================================================================-->
 </head>
 <body>
-<form action="" method="post">
+	
 	<div class="limiter">
 		<div class="container-table100">
 			<div class="wrap-table100">
@@ -109,7 +100,7 @@ if(isset($_POST['deleteItem']) and is_numeric($_POST['deleteItem']))
 							<?php echo $row['vehicle'] ?>
 							</div>
                             <div class="cell" data-title="vehicle">
-							<input type="submit" name="deleteItem" value="<?php echo $row['id'] ?>" />
+							<input type="submit" name="deleteItem" value="<?php echo $row['vehicle'] ?>" />
 							</div>
                         </div>
                         <?php } ?>
@@ -118,7 +109,7 @@ if(isset($_POST['deleteItem']) and is_numeric($_POST['deleteItem']))
 		</div>
 	</div>
 
-</form>
+
 	
 
 <!--===============================================================================================-->	
