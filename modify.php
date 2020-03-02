@@ -100,7 +100,7 @@ mysqli_close($link);
 							<?php echo $row['vehicle'] ?>
 							</div>
                             <div class="cell" data-title="vehicle">
-							<input type="submit" name="deleteItem" value="<?php echo $row['vehicle'] ?>" />
+							<a href="delete.php?<?php echo $row['id'];  ?>">delete</a></td>
 							</div>
                         </div>
                         <?php } ?>
