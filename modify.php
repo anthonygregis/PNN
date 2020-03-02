@@ -65,7 +65,7 @@ if(isset($_POST['deleteItem']) and is_numeric($_POST['deleteItem']))
 <!--===============================================================================================-->
 </head>
 <body>
-	
+<form action="" method="post">
 	<div class="limiter">
 		<div class="container-table100">
 			<div class="wrap-table100">
@@ -118,7 +118,7 @@ if(isset($_POST['deleteItem']) and is_numeric($_POST['deleteItem']))
 		</div>
 	</div>
 
-
+</form>
 	
 
 <!--===============================================================================================-->	
