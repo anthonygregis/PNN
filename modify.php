@@ -10,30 +10,25 @@ if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 
-if(isset($_GET["cat"]) && isset($_GET["search"])){
-    $category = trim($_GET["cat"]);
-    $search = trim($_GET["search"]);
 
-    // Prepare a select statement
-    $sql = 'SELECT * FROM transactions WHERE ' . $category . ' LIKE "' . $search . '%"';
-
-    $result = mysqli_query($link, $sql) or die(mysqli_error($link));
-    $tableArray = array();
-    $counter = 0;
-    while ($row = mysqli_fetch_array($result))
-    {
-    	 $tableArray[$counter]['name'] = $row['name'];
-         $tableArray[$counter]['citizenID'] = $row['citizenID'];
-         $tableArray[$counter]['phone'] = $row['phone'];
-    	 $tableArray[$counter]['licensePlate'] = $row['licensePlate'];
-         $tableArray[$counter]['vehicle'] = $row['vehicle'];
-         $tableArray[$counter]['id'] = $row['id'];
-         $counter++;
-    }
+// Prepare a select statement
+$sql = "SELECT * FROM transactions";
+$result = mysqli_query($link, $sql) or die(mysqli_error($link));
+$tableArray = array();
+$counter = 0;
+while ($row = mysqli_fetch_array($result))
+{
+	 $tableArray[$counter]['name'] = $row['name'];
+     $tableArray[$counter]['citizenID'] = $row['citizenID'];
+     $tableArray[$counter]['phone'] = $row['phone'];
+	 $tableArray[$counter]['licensePlate'] = $row['licensePlate'];
+     $tableArray[$counter]['vehicle'] = $row['vehicle'];
+     $tableArray[$counter]['id'] = $row['id'];
+     $counter++;
+}
 
 //Close Connection
 mysqli_close($link);
-}
 
 if(isset($_POST['deleteItem']) and is_numeric($_POST['deleteItem']))
 {
