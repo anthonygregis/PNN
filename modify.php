@@ -100,7 +100,7 @@ mysqli_close($link);
 							<?php echo $row['vehicle'] ?>
 							</div>
                             <div class="cell" data-title="vehicle">
-							<a href="delete.php?<?php echo $row['id'];  ?>">delete</a></td>
+							<a href="delete.php?id=<?php echo $row['id'];  ?>">delete</a></td>
 							</div>
                         </div>
                         <?php } ?>
