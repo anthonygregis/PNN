@@ -109,7 +109,7 @@ if(isset($_POST['deleteItem']) and is_numeric($_POST['deleteItem']))
 							<?php echo $row['vehicle'] ?>
 							</div>
                             <div class="cell" data-title="vehicle">
-							<input type="submit" name="deleteItem" value="<?php echo $row['vehicle'] ?>" />
+							<input type="submit" name="deleteItem" value="<?php echo $row['id'] ?>" />
 							</div>
                         </div>
                         <?php } ?>
