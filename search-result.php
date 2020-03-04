@@ -18,7 +18,7 @@ if(isset($_GET["cat"]) && isset($_GET["search"])){
 	$query->bind_param ('ss', $category, $search);
 
 	//Updated Here
-	$result = $q -> execute();
+	$result = $query -> execute();
 
 	if ($result->num_rows == 1)
 	{
