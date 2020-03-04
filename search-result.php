@@ -22,7 +22,7 @@ if(isset($_GET["cat"]) && isset($_GET["search"])){
 	$tableArray = array();
     $counter = 0;
 
-	$result = $stmt->get_result();
+	$result = $query->get_result();
 	while ($row = $result->fetch_assoc()) {
 		$tableArray[$counter]['name'] = $row['name'];
         $tableArray[$counter]['citizenID'] = $row['citizenID'];
