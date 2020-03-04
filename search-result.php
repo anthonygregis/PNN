@@ -14,19 +14,21 @@ if(isset($_GET["cat"]) && isset($_GET["search"])){
     $category = trim($_GET["cat"]);
     $search = trim($_GET["search"]);
 
-    $query = $link->prepare ("SELECT * FROM transactions WHERE ? LIKE ?");
-	$query->bind_param ('ss', $category, $search);
+    // Prepare a select statement
+    $sql = 'SELECT * FROM transactions WHERE ' . $category . ' LIKE "' . $search . '%"';
 
-	//Updated Here
-	$query -> execute();
-	$tableArray = array();
+    $result = mysqli_query($link, $sql) or die(mysqli_error($link));
+    $tableArray = array();
     $counter = 0;
-
-	$result = $query->get_result();
-	while ($row = $result->fetch_assoc()) {
-		printf ("%s (%s)\n", $row["name"]);
-	}
-
+    while ($row = mysqli_fetch_array($result))
+    {
+    	 $tableArray[$counter]['name'] = $row['name'];
+         $tableArray[$counter]['citizenID'] = $row['citizenID'];
+         $tableArray[$counter]['phone'] = $row['phone'];
+    	 $tableArray[$counter]['licensePlate'] = $row['licensePlate'];
+         $tableArray[$counter]['vehicle'] = $row['vehicle'];
+         $counter++;
+    }
 
 //Close Connection
 mysqli_close($link);
