@@ -14,7 +14,7 @@ if(isset($_GET["cat"]) && isset($_GET["search"])){
     $category = trim($_GET["cat"]);
     $search = trim($_GET["search"]);
 
-    $query = $dbc->prepare ("SELECT * FROM transactions WHERE ? LIKE ?");
+    $query = $link->prepare ("SELECT * FROM transactions WHERE ? LIKE ?");
 	$query->bind_param ('ss', $category, $search);
 
 	//Updated Here
