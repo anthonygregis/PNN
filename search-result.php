@@ -20,7 +20,7 @@ if(isset($_GET["cat"]) && isset($_GET["search"])){
 	//Updated Here
 	$result = $query -> execute();
 
-	if ($result->num_rows == 1)
+	if ($result->num_rows >= 1)
 	{
 	    $assocData = $result->fetch_array(MYSQLI_ASSOC);
 	    echo $assocData;
