@@ -18,9 +18,18 @@ if(isset($_GET["cat"]) && isset($_GET["search"])){
 	$query->bind_param ('ss', $category, $search);
 
 	//Updated Here
-	$result = $query -> execute();
+	$query -> execute();
+	$tableArray = array();
+    $counter = 0;
 
-	echo $result;
+	foreach ($query as $row) {
+		$tableArray[$counter]['name'] = $row['name'];
+        $tableArray[$counter]['citizenID'] = $row['citizenID'];
+        $tableArray[$counter]['phone'] = $row['phone'];
+    	$tableArray[$counter]['licensePlate'] = $row['licensePlate'];
+        $tableArray[$counter]['vehicle'] = $row['vehicle'];
+        $counter++;
+	}
 
 
 //Close Connection
