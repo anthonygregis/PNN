@@ -24,7 +24,9 @@ if(isset($_GET["cat"]) && isset($_GET["search"])){
 	{
 	    $assocData = $result->fetch_array(MYSQLI_ASSOC);
 	    echo $assocData;
-	}  
+	}  else {
+		echo "no results";
+	}
 
 
 //Close Connection
